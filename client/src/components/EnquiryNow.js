@@ -13,7 +13,7 @@ export default function EnquiryNow() {
   const onSubmit = async (data) => {
     try{
       await axios
-        .post("http://localhost:5000/api/v1/enquiry", {
+        .post("https://nti-app.onrender.com/api/v1/enquiry", {
           name: data.name,
           email: data.email,
           phone: data.phone,
