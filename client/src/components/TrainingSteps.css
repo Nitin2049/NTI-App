@@ -1,0 +1,85 @@
+.ducat-training {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.step {
+  flex: 1 1 200px;
+  text-align: center;
+  border: 1px dashed #ffa500;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.step-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-label {
+  font-weight: bold;
+  color: #ffa500;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  margin: 0;
+  color: #333;
+}
+
+.benefits h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #003366;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.benefits h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #ffa500;
+  margin-top: 0.25rem;
+  border-radius: 2px;
+}
+
+.benefits ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.benefits li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.benefits p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,138 @@
+/* EnquiryNow.css */
+
+.enquiry-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: linear-gradient(rgb(129, 129, 231),white);
+
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  color: #191818c2;
+}
+
+.enquiry-content {
+  flex: 1 1 400px;
+  padding: 2rem;
+}
+
+.enquiry-content h2 {
+  font-size: 2rem;
+  color: #ffa500;
+}
+
+.enquiry-content h2 span {
+  color: #fff;
+}
+
+.enquiry-content p {
+  margin: 1rem 0;
+  line-height: 1.5;
+  
+}
+
+.contact-info {
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background: #ffa500;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.icon-circle i {
+  color: #fff;
+}
+
+.enquiry-form {
+  flex: 1 1 400px;
+  background: white;
+  color: black;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.enquiry-form h3 {
+  text-align: center;
+  color: #ffa500;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.enquiry-form h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #ffa500;
+  margin: 0.5rem auto 0;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  flex: 1 1 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: #888;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1565C0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0d47a1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .enquiry-section {
+    flex-direction: column;
+  }
+
+  .enquiry-content, .enquiry-form {
+    padding: 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}

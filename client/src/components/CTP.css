@@ -1,0 +1,63 @@
+.ctp-section {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ctp-container {
+  text-align: left;
+}
+
+.ctp-container h2, .ctp-container h3 {
+  color: #003366;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.ctp-container h2::after, .ctp-container h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #ff7f00;
+  margin-top: 0.25rem;
+  border-radius: 2px;
+}
+
+.ctp-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.ctp-container p strong {
+  font-weight: bold;
+}
+
+.ctp-container a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.ctp-container a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .ctp-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .ctp-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .ctp-container p {
+    font-size: 0.95rem;
+  }
+}
