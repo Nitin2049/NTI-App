@@ -21,7 +21,7 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/verify-token",
+        "https://nti-app.onrender.com/api/v1/verify-token",
         {
           token: idToken,
         }
@@ -32,7 +32,7 @@ export default function Login() {
       const userId = gen();
       try {
         const fetchData = await axios.post(
-          "http://localhost:5000/api/v1/user/profile",
+          "https://nti-app.onrender.com/api/v1/user/profile",
           {
             name: verifiedUser.name,
             email: verifiedUser.email,
