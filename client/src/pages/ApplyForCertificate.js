@@ -13,7 +13,7 @@ export default function ApplyForCertificate() {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post('http://localhost:5000/api/v1/apply-for-certificate', {
+      await axios.post('https://nti-app.onrender.com/api/v1/apply-for-certificate', {
         name: data.name,
         email: data.email,
         phone: data.phone,
