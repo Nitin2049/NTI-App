@@ -1,6 +1,6 @@
 import "./EnquiryNow.css";
-import { useForm } from "react-hook-form";
-import axios from "axios";
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 export default function EnquiryNow() {
   const {
@@ -11,21 +11,22 @@ export default function EnquiryNow() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    try {
-      await axios.post("http://localhost:5000/api/v1/enquiry", {
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        center: data.center,
-        course: data.course,
-        companyName: data.companyName,
-        message: data.message,
-      });
-      alert("Enquiry submitted successfully!");
-    } catch (error) {
-      console.error("Error submitting form:", error);
+    try{
+      await axios
+        .post("http://localhost:5000/api/v1/enquiry", {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          center: data.center,
+          course: data.course,
+          companyName: data.companyName,
+          message: data.message,
+
+        })
+    }catch (error) {
+      console.error('Error submitting form:', error);
     }
-    console.log("Form Submitted:", data);
+    console.log('Form Submitted:', data);
     reset();
   };
 
@@ -36,24 +37,20 @@ export default function EnquiryNow() {
         <div className="col-lg-6 text-section d-flex flex-column justify-content-center p-5 text-white">
           <h2>
             Level Up Your <span className="highlight">Workforce</span>,<br />
-            Invest In Skills For a{" "}
-            <span className="highlight">Future-Proof Growth</span>
+            Invest In Skills For a <span className="highlight">Future-Proof Growth</span>
           </h2>
           <p>
-            By investing in your team’s skills today,
-            <br />
+            By investing in your team’s skills today,<br />
             you’re building a strong foundation for future success.
           </p>
-          <button className="btn btn-warning fw-bold mt-3">
-            📥 DOWNLOAD BROCHURE
-          </button>
+          <button className="btn btn-warning fw-bold mt-3">📥 DOWNLOAD BROCHURE</button>
         </div>
 
         {/* Right Section */}
         <div className="col-lg-6 form-section d-flex align-items-center justify-content-center py-4">
           <form
             className="p-4 shadow rounded w-100 text-white"
-            style={{ maxWidth: "500px" }}
+            style={{ maxWidth: '500px' }}
             onSubmit={handleSubmit(onSubmit)}
           >
             <h5 className="text-center mb-4 text-dark border-bottom pb-2 fw-bold">
@@ -69,11 +66,9 @@ export default function EnquiryNow() {
                   id="name"
                   className="form-control"
                   placeholder="Name"
-                  {...register("name", { required: "Name is required" })}
+                  {...register('name', { required: 'Name is required' })}
                 />
-                {errors.name && (
-                  <p className="text-warning small">{errors.name.message}</p>
-                )}
+                {errors.name && <p className="text-warning small">{errors.name.message}</p>}
               </div>
 
               <div className="col-md-6 mb-3">
@@ -85,25 +80,20 @@ export default function EnquiryNow() {
                   type="email"
                   className="form-control"
                   placeholder="Email"
-                  {...register("email", {
-                    required: "Email is required",
+                  {...register('email', {
+                    required: 'Email is required',
                     pattern: {
                       value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-                      message: "Invalid email",
+                      message: 'Invalid email',
                     },
                   })}
                 />
-                {errors.email && (
-                  <p className="text-warning small">{errors.email.message}</p>
-                )}
+                {errors.email && <p className="text-warning small">{errors.email.message}</p>}
               </div>
             </div>
 
             <div className="d-flex justify-content-center gap-3 flex-wrap px-3">
-              <div
-                className="mb-3"
-                style={{ flex: "1", minWidth: "200px", maxWidth: "300px" }}
-              >
+              <div className="mb-3" style={{ flex: '1', minWidth: '200px', maxWidth: '300px' }}>
                 <label htmlFor="phone" className="form-label">
                   Mobile
                 </label>
@@ -111,33 +101,26 @@ export default function EnquiryNow() {
                   id="mobile"
                   className="form-control"
                   placeholder="Phone Number"
-                  {...register("phone", { required: "Mobile is required" })}
+                  {...register('phone', { required: 'Mobile is required' })}
                 />
-                {errors.phone && (
-                  <p className="text-warning small">{errors.mobile.phone}</p>
-                )}
+                {errors.phone && <p className="text-warning small">{errors.mobile.phone}</p>}
               </div>
 
-              <div
-                className="mb-3"
-                style={{ flex: "1", minWidth: "200px", maxWidth: "300px" }}
-              >
+              <div className="mb-3" style={{ flex: '1', minWidth: '200px', maxWidth: '300px' }}>
                 <label htmlFor="center" className="form-label">
                   Center
                 </label>
                 <select
                   id="center"
                   className="form-select"
-                  {...register("center", { required: "Center is required" })}
+                  {...register('center', { required: 'Center is required' })}
                 >
                   <option value="">Select Center</option>
                   <option>Noida</option>
                   <option>Pune</option>
                   <option>Rewa</option>
                 </select>
-                {errors.center && (
-                  <p className="text-warning small">{errors.center.message}</p>
-                )}
+                {errors.center && <p className="text-warning small">{errors.center.message}</p>}
               </div>
             </div>
 
@@ -146,15 +129,13 @@ export default function EnquiryNow() {
               <select
                 id="course"
                 className="form-select"
-                {...register("course", { required: "Course is required" })}
+                {...register('course', { required: 'Course is required' })}
               >
                 <option value="">Select Course</option>
                 <option>Web Development</option>
                 <option>Data Science</option>
               </select>
-              {errors.course && (
-                <p className="text-warning small">{errors.course.message}</p>
-              )}
+              {errors.course && <p className="text-warning small">{errors.course.message}</p>}
             </div>
 
             <div className="mb-3 px-3">
@@ -163,15 +144,9 @@ export default function EnquiryNow() {
                 id="companyName"
                 className="form-control"
                 placeholder="Company Name"
-                {...register("companyName", {
-                  required: "Company Name is required",
-                })}
+                {...register('companyName', { required: 'Company Name is required' })}
               />
-              {errors.companyName && (
-                <p className="text-warning small">
-                  {errors.companyName.message}
-                </p>
-              )}
+              {errors.companyName && <p className="text-warning small">{errors.companyName.message}</p>}
             </div>
 
             <div className="mb-3 px-3">
@@ -181,12 +156,12 @@ export default function EnquiryNow() {
                 className="form-control"
                 rows="3"
                 placeholder="Write your message..."
-                {...register("message")}
+                {...register('message')}
               />
             </div>
 
             <div className="d-flex justify-content-center">
-              
+              <h2>{text}</h2>
               <button type="submit" className="btn btn-primary w-50">
                 Submit
               </button>

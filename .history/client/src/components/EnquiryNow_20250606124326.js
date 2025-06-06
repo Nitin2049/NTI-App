@@ -10,6 +10,10 @@ export default function EnquiryNow() {
     reset,
   } = useForm();
 
+  const submitText = () => {
+    const text = "Form Submitted Successfully";
+  };
+
   const onSubmit = async (data) => {
     try {
       await axios.post("http://localhost:5000/api/v1/enquiry", {
@@ -21,7 +25,7 @@ export default function EnquiryNow() {
         companyName: data.companyName,
         message: data.message,
       });
-      alert("Enquiry submitted successfully!");
+      submitText();
     } catch (error) {
       console.error("Error submitting form:", error);
     }
@@ -186,7 +190,7 @@ export default function EnquiryNow() {
             </div>
 
             <div className="d-flex justify-content-center">
-              
+              <h2>{text}</h2>
               <button type="submit" className="btn btn-primary w-50">
                 Submit
               </button>

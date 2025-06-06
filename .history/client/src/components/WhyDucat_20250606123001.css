@@ -1,0 +1,51 @@
+.why-ducat {
+  background-color: #13275a;
+  padding: 3rem 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.why-ducat h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.why-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.why-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  padding: 1rem;
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #61c8ff;
+  margin-bottom: 1rem;
+}
+
+.why-item h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.why-item p {
+  color: #b0cde6;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

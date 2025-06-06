@@ -11,22 +11,23 @@ export default function EnquiryNow() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    try {
-      await axios.post("http://localhost:5000/api/v1/enquiry", {
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        center: data.center,
-        course: data.course,
-        companyName: data.companyName,
-        message: data.message,
-      });
-      alert("Enquiry submitted successfully!");
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    }
+    // try {
+    //   await axios.post("http://localhost:5000/api/v1/enquiry", {
+    //     name: data.name,
+    //     email: data.email,
+    //     phone: data.phone,
+    //     center: data.center,
+    //     course: data.course,
+    //     companyName: data.companyName,
+    //     message: data.message,
+    //   });
+    //   alert("Enquiry submitted successfully!");
+    // } catch (error) {
+    //   console.error("Error submitting form:", error);
+    // }
     console.log("Form Submitted:", data);
     reset();
+    alert("Enquiry submitted successfully!");
   };
 
   return (

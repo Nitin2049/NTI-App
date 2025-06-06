@@ -1,0 +1,64 @@
+.placement-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f8f9fa;
+}
+
+.placement-heading {
+  font-size: 2.2rem;
+  color: #0b5394;
+  margin-bottom: 30px;
+}
+
+.placement-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.placement-card {
+  background: #004080;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 153, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.placement-card:hover {
+  transform: translateY(-5px);
+}
+
+.placement-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  border: 4px solid #ff9900;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.placement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placement-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.placement-card p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .placement-card {
+    width: 90%;
+  }
+}

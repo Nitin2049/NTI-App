@@ -30,7 +30,6 @@ import CoursePython from "./pages/CoursePython";
 import CourseC from "./pages/CourseC";
 import CourseCPP from "./pages/CourseCPP";
 import PlacementSection from "./pages/PlacementSection";
-import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -48,7 +47,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route
           path="/online-registration-form"

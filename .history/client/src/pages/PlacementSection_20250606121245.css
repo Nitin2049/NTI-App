@@ -1,0 +1,30 @@
+/* PlacementSection.css */
+
+.placement-section {
+  background-color: #e6f7ff; /* Light blue background */
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.placement-title {
+  font-size: 2rem;
+  color: #0c3c60;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.placement-description {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .placement-title {
+    font-size: 1.5rem;
+  }
+
+  .placement-description {
+    font-size: 1rem;
+  }
+}
