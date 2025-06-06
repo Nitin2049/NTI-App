@@ -12,7 +12,7 @@ export default function OnlineTraining() {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post("http://localhost:5000/api/v1/registration",{
+      await axios.post("https://nti-app.onrender.com/api/v1/registration",{
         name: data.name,
         email: data.email,
         phone: data.phone,
