@@ -1,0 +1,1 @@
+export const domainRoute = "https://nti-app.onrender.com" || "http://localhost:5000";
