@@ -91,7 +91,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2025 NTI Tech Academy. All Rights Reserved. Designed & developed by Priyanka Soni, Nitin Singh & Anoop Singh</p>
+        <p>&copy; 2025 NTI Tech Academy. All Rights Reserved. Designed & developed by Nitin Singh & Anoop Singh</p>
       </div>
     </footer>
   );
